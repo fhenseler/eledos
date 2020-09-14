@@ -1,0 +1,18 @@
+img {
+  height: 535px;
+  width: 100%;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row{
+  align-items: center; 
+  justify-content: center;
+}
+
+ngb-carousel{
+  outline: none !important;
+  border: 0px !important;
+}

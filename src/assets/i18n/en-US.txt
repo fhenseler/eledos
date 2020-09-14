@@ -1,0 +1,14 @@
+{
+      "Inicio"                  : "Home",
+      "Items"                   : "Items",
+      "Personajes"              : "Characters",
+      "Powerleveling"           : "Powerleveling",
+      "Contacto"                : "Contact",
+      "Tipo"                    : "Type",
+      "Consigue lo que necesitas" : "Get anything you need",
+      "Elige items y personajes de nuestros listados. Si no logras encontrar lo que buscas, puedes realizar un pedido." : "Choose items and characters from our listings. If you can't find what you're looking for, feel free to place an order.",
+      "Vende tus items" : "Sell your items",
+      "Puedes agregar tus items a nuestra lista de ventas. Si tu item se vende a través de nuestro sitio web, cobraremos un 5% de su precio." : "You're welcome to add your items to our sales list. If your item gets sold through our website, we'll charge a 5% fee.",
+      "Servicios de Powerleveling" : "Powerleveling Services",
+      "Rápido y conveniente. Revisa nuestros precios y contáctanos para más detalles." : "Fast and convenient. Check our prices out and contact us for further details."
+}
