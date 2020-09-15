@@ -1,6 +1,4 @@
-# Eledos
-
-## eledosx.web.app
+# eledosx.web.app
 
 This project was created using Angular + Typescript + Firebase. Its main purpose is to showcase items and services
 in the context of an online game.
