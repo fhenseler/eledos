@@ -32,6 +32,7 @@ import { ServerFilterPipe } from './Pipes/server-filter.pipe';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { NotFoundComponent } from './Components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common
     FooterComponent,
     AdenaConverterComponent,
     ServerFilterPipe,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

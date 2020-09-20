@@ -1,10 +1,8 @@
 img {
-  height: 535px;
-  width: 100%;
-  object-fit: fill;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: block;
+  width: 100vw;
+  height: 85.8vh;
+  object-fit: cover;
 }
 
 .row{
