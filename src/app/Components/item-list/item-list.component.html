@@ -1,0 +1,92 @@
+<div class="bg"> 
+<div class="container">
+
+<app-adena-converter></app-adena-converter>
+  
+    <div class="border card text-white bg-light mb-12">
+        <div class="card-body">
+            <h5 class="control-label"><strong>{{'Items' | translate}}</strong></h5>
+            <div class="d-flex flex-row">
+                <label><strong>&nbsp; {{'Type' | translate}} &nbsp;</strong></label>
+                <select [(ngModel)]="selectedType">
+                    <option selected>All Items</option>
+                    <option *ngFor="let type of itemTypes">{{ type }}</option>
+                </select>
+               
+                <label><strong>&nbsp; {{'Server' | translate}} &nbsp;</strong></label>
+                <select [(ngModel)]="selectedServer">
+                    <option selected>All Servers</option>
+                    <option *ngFor="let server of servers">{{ server }}</option>
+                </select>
+        </div>
+        <div class="table-responsive-md">
+                <table class="table table-md">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th></th>
+                            <th>{{'Item Name' | translate}}</th>
+                            <th>{{'Enchant Level' | translate}}</th>
+                            <th>{{'Amount' | translate}}</th>
+                            <th>{{'Unit Price (US Dollars)' | translate}}</th>
+                            <th>{{'Server' | translate}}</th>
+                            <th>{{'Date Added' | translate}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of items | itemTypeFilter: selectedType | serverFilter: selectedServer" class="table-primary"
+                            (click)="viewItemDetail(item.payload.doc.id)">
+                            <ng-container *ngIf="item.payload.doc.data().itemStatus === 'Available'">
+                            <td>
+                                <img [src]='item.payload.doc.data().imageUrl'>
+                            </td>
+                            <td>
+                                {{ item.payload.doc.data().itemName }}
+                            </td>
+                            <td>
+                                {{ item.payload.doc.data().enchantLevel }}
+                            </td>
+                            <td>
+                                {{ item.payload.doc.data().itemAmount }}
+                            </td>
+                            <td>
+                                {{ item.payload.doc.data().unitPrice | currency }}
+                            </td>
+                            <td>
+                                {{ item.payload.doc.data().server }}
+                            </td>
+                            <td>
+                                {{ item.payload.doc.data().date }}
+                            </td>
+                        </ng-container>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-template #itemDetail let-modal class="card text-white bg-primary mb-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    <span>{{'Item details' | translate}}</span>
+                </h5>
+                <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ng-container *ngFor="let item of items">
+                <ng-container *ngIf="selectedId === item.payload.doc.id">    
+                    <img class="img-responsive" [src]='item.payload.doc.data().imageUrl2'>
+            </ng-container>
+        </ng-container>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+</ng-template>
+
+</div><!-- bg -->

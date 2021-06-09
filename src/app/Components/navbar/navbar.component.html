@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="navbar-brand" href="#">
+      <img class="img-responsive" src='../../../assets/logo.png'>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <a class="nav-link" routerLink="/dashboard"><strong>{{'Home' | translate}}</strong></a> 
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+            <a class="nav-link" routerLink="/itemList"><strong>{{'Items' | translate}}</strong></a> 
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="/characterList"><strong>{{'Characters' | translate}}</strong></a>
+        </li>
+        <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="/powerleveling"><strong>{{'Powerleveling' | translate}}</strong></a>
+        </li>
+        <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link" routerLink="/contact">{{'Contact' | translate}}</a>
+        </li> -->
+      </ul>
+        <ul class="navbar-nav flags">
+          <li class="flag">
+            <a class="usFlag" (click)="useLanguage('en-US')"></a>
+          </li>
+          <li class="flag">
+            <a class="espFlag" (click)="useLanguage('es-AR')"></a>
+          </li>
+        <!-- <li class="flag">
+            <a class="brFlag" (click)="useLanguage('pt-BR')"></a>
+          </li>  -->
+        </ul>
+    </div>
+  </nav>

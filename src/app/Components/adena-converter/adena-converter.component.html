@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-sm-6">
+    <div class="border card text-white mb-6">
+    <div class="card-body bg-primary">
+    <div class="form-group">
+    
+        <h5 class="control-label"><strong>{{'Adena Converter' | translate}}</strong></h5>
+        <label name="adenaPrice" id="adenaPrice">${{ adenaPrice }} USD/m</label>
+        &nbsp;
+        <label for="date"> Last updated: {{ this.today }}</label>
+        
+        <div class="row">
+    
+        <div class="col">
+        <div class="input-group mb-3">
+    
+        <div class="input-group-prepend">
+              <span class="input-group-text">$</span>
+        </div> <!-- input-group-prepend -->
+            
+        <input type="text" name="usdAmount" id="usdAmount" placeholder="USD" [(ngModel)]="usdAmount" (ngModelChange)="usdToAdena(usdAmount)"/>
+        <label>&nbsp;⇄&nbsp;</label>
+    
+        <input type="text" name="adenaAmount" id="adenaAmount" placeholder="Adena" [(ngModel)]="adenaAmount" (ngModelChange)="adenaToUsd(adenaAmount)"/>
+        <div class="input-group-append">
+              <span class="input-group-text">Adena</span>
+        </div> <!-- input-group-append -->
+        </div> <!-- input-group mb-3 -->
+        
+        </div> <!-- col --> 
+      </div> <!-- row -->  
+    
+    </div> <!-- form -->  
+    </div> <!-- card -->  
+    </div> <!-- card -->  
+    </div> <!-- col -->  
+    </div> <!-- row -->  

@@ -1,0 +1,57 @@
+<div class="bg">
+<div class="container">
+
+    <div class="border card text-white bg-light mb-12">
+        <div class="card-body">
+            <h5 class="control-label"><strong>{{'Characters' | translate}}</strong></h5>
+            <div class="d-flex flex-row">
+                <label>&nbsp; {{'Server' | translate}} &nbsp;</label>
+                <select [(ngModel)]="selectedServer">
+                    <option selected>All Servers</option>
+                    <option *ngFor="let server of servers">{{ server }}</option>
+                </select>
+            </div>
+            <div class="table-responsive-md">
+                <table class="table table-md table-hover">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th></th>
+                            <th>{{'Class' | translate}}</th>
+                            <th>{{'Level' | translate}}</th>
+                            <th>{{'Details' | translate}}</th>
+                            <th>{{'Price (US Dollars)' | translate}}</th>
+                            <th>{{'Server' | translate}}</th>
+                            <th>{{'Date Added' | translate}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                            <tr *ngFor="let character of characters | serverFilter: selectedServer" class="table-primary">
+                            <td>
+                                
+                            </td>
+                            <td>
+                                {{ character.payload.doc.data().class }}
+                            </td>
+                            <td>
+                                {{ character.payload.doc.data().level }}
+                            </td>
+                            <td>
+                                {{ character.payload.doc.data().details }}
+                            </td>
+                            <td>
+                                {{ character.payload.doc.data().price | currency }}
+                            </td>
+                            <td>
+                                {{ character.payload.doc.data().server }}
+                            </td>
+                            <td>
+                                {{ character.payload.doc.data().date }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+.bg{
+    background-image: url(../../../assets/itemback.jpg);
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.table tr{
+    cursor: pointer;
+}
+
+.table th{
+    cursor: auto;
+}
+
+.table{
+    margin-top: 10px;
+}
+
+.form-control{
+    max-width: 130px;
+    text-align: left;
+}
+
+.card{
+    max-width: 200rem;
+    margin-top: 20px;
+}
+
+
+.img-responsive{
+    max-width: 100%;
+    size: 100%;
+}
+
+.modal-footer{
+    display: none;
+}
+
+.modal-body{
+    margin-bottom: 0;
+}
+
+.table-hover>thead>tr.no-hover:hover {
+    background-color: #4d4d4d;
+}
+
+label{
+    font-size: 15px;
+    margin: 3px;
+}

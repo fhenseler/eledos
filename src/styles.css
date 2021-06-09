@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+
+body, html {
+    height: 100%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    height: 100%;
+    width: 100%;
+    font-family: Source Sans Pro, "Helvetica Neue", sans-serif;
+}
+
+html {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    margin:0;
+    padding:0;
+ } 

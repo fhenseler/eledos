@@ -1,0 +1,18 @@
+.profile-dp{
+    margin-top: 50px;
+    display: flex;
+}
+
+h5{
+    margin-left: 5px;
+    margin-top: 25px;
+}
+
+.bg{
+    background-image: url(../../../assets/4.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:20px;
+}
